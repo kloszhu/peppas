@@ -22,7 +22,34 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="jinjatest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\ConfigPath.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DbConfig.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\DbProvider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Repository.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\IniHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="peppa.py" />
+    <Compile Include="peppamysql.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
@@ -37,6 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
