@@ -5,7 +5,9 @@
 #postgresql+psycopg2://@localhost/test
 #mysql+mysqldb://@localhost/test
 import os
+import json
 from sqlalchemy import String, Column, Integer
+#from sqlalchemy.engine import 
 from sqlalchemy import create_engine,text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -45,7 +47,10 @@ def Search(con:Connection):
     cursor = con.execute(text(mssqlstr),{'uid': [1,2,9]})
     result = cursor.fetchall()
     print(type(result))
-    print(result)
+    #print("-------------------------")
+    #print( json.dumps(result))
+    #print("-------------------------")
+    print( [dict(zip(re.keys(), re)) for re in result])
     for x in result:
         print(x)
 

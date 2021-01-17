@@ -2,10 +2,15 @@ click==7.1.2
 ecdsa==0.14.1
 fastapi==0.60.1
 h11==0.9.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+mssql==1.0.1
 pip==20.1.1
 pyasn1==0.4.8
 pydantic==1.6.1
+pymssql==2.1.5
 PyMySQL==1.0.2
+pyodbc==4.0.30
 python-jose==3.2.0
 rsa==4.6
 setuptools==47.1.0
